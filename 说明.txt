@@ -1,3 +1,7 @@
+4.12
+做数据库作业，写了一个找超键的程序。
+顺便搞一下github。
+上传文件：
 git add
 git commit -m "备注"
 git push
