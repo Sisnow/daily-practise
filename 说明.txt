@@ -1,7 +1,10 @@
 4.12
 做数据库作业，写了一个找超键的程序。
 顺便搞一下github。
+github现在默认分支为main
 上传文件：
 git add
 git commit -m "备注"
 git push
+下载文件：
+git pull
