@@ -1,0 +1,4 @@
+﻿  源.cpp
+D:\VScode\4.16\源.cpp(14,65): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\VScode\4.16\源.cpp(15,65): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  4.16.vcxproj -> D:\VScode\4.16\x64\Debug\4.16.exe
