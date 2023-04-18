@@ -11,3 +11,10 @@ git pull
 
 4.16
 EOJ 3127. 字串间距
+
+4.18
+JDBC程序
+Database-System-Consepts 5.12
+Write a Java program that allows university administrators to print the teaching
+record of an instructor.
+注：部署postgresql-42.6.0.jar
