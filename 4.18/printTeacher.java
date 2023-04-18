@@ -3,31 +3,20 @@ import java.util.Scanner;
 
 public class printTeacher {
 	public static void main(String[] args) {
-		//预设的用户id和密码
-		String c_user_id = "gaussdb";
-		String c_password = "Password@123";
 
-		//a.输入登录ID和密码，打开正确的连接
-		System.out.println("请输入ID");
-		Scanner in = new Scanner(System.in);
-		String user_id = in.next();
-		System.out.println("请输入密码");
-		String password = in.next();
-		try {
+		while(true){//将try放入循环，若用户名和密码错误，可重新输入
+			try {
 			try {
 				Class.forName( "org.postgresql.Driver");
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
-			while(!user_id.equals(c_user_id) || !password.equals(c_password)) {//若用户名和密码错误，可重新输入
-				System.out.println("ID或密码错误");
-				System.out.println("请输入ID");
-				user_id = in.next();
-				System.out.println("请输入密码，输入q退出");
-				password = in.next();
-				if(password.equals("q"))
-					throw new Exception("退出程序！");
-			}
+			//a.输入登录ID和密码，打开正确的连接
+			System.out.println("请输入ID");
+			Scanner in = new Scanner(System.in);
+			String user_id = in.next();
+			System.out.println("请输入密码");
+			String password = in.next();
 			Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:15432/db2022", user_id, password);
 			System.out.println("成功连接数据库！");
 
@@ -101,15 +90,13 @@ public class printTeacher {
 					}
 				}
 			}
-		}
-		catch (SQLException e) {
-			e.printStackTrace();
-		} 
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-		finally{
-			in.close();
+			}
+			catch (SQLException e) {
+				e.printStackTrace();
+			} 
+			catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
